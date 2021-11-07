@@ -15,8 +15,6 @@ export const App = () => {
 	const [textContent, setTextContent] = useState('Play!')
 	const [flag, setFlag] = useState(false)
 
-	// let flag = false
-
 	function botChoiceValueFunc (){
 		return Math.floor(Math.random() * 3);
 	}
@@ -34,17 +32,12 @@ export const App = () => {
 	}
 
 	function game(e){
-
-		console.log('Game is running!')
-		console.log('flag', flag)
-
+		
 		if(flag){
 			return;
 		}
 		
 		setFlag(true);
-
-		console.log('flag2', flag)
 		
 		const elem = e.target
 		const botChoiceValue = botChoiceValueFunc()
